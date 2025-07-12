@@ -23,8 +23,12 @@ params = {'max_depth': 4,
         # 'n_estimators': 10
         }
 
+# dagshub repo connection
+import dagshub
+dagshub.init(repo_owner='datta-abhi', repo_name='mlflow-dagshub-demo', mlflow=True)
+
 # set mlflow uri for tracking
-mlflow.set_tracking_uri()
+mlflow.set_tracking_uri("https://dagshub.com/datta-abhi/mlflow-dagshub-demo.mlflow")
 
 # apply mlflow
 mlflow.set_experiment('iris-dt')
